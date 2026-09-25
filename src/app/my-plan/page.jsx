@@ -40,7 +40,7 @@ const MyPlanPage = () => {
 
             {/* tabs */}
             <div className="flex justify-between">
-                {/* <div role="tablist" className="tabs tabs-box w-fit rounded-2xl border border-[#292D35] bg-[#111318] p-1">
+                <div role="tablist" className="tabs tabs-box w-fit rounded-2xl border border-[#292D35] bg-[#111318] p-1">
                     <button type="button" role="tab" onClick={() => setActiveTab("today")}
                         className={`tab rounded-xl px-5 text-sm font-semibold transition-all duration-200 
                             ${activeTab === "today" ?
@@ -60,7 +60,7 @@ const MyPlanPage = () => {
                     >
                         Saved
                     </button>
-                </div> */}
+                </div>
 
                 {/* sorting */}
                 {/* <div className="flex gap-3 items-center">
@@ -85,7 +85,7 @@ const MyPlanPage = () => {
             </div>
 
             {/* content */}
-            {/* <div className="mt-6">
+            <div className="mt-6">
                 {activeTab === "today" ? (
                     <div className='grid grid-cols-1 gap-4'>
                         {
@@ -123,7 +123,7 @@ const MyPlanPage = () => {
                         }
                     </div>
                 )}
-            </div> */}
+            </div>
         </div>
     );
 };
