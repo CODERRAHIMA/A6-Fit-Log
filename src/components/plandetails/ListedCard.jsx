@@ -11,20 +11,20 @@ const ListedCard = ({ workout, activeTab }) => {
 
     const { setTodaysWorkout, setSavedWorkout } = useContext(WorkOutContext);
 
-    // const handleMarkAsDone = (id) => {
-    //     setTodaysWorkout((prev) => prev.filter((workout) => workout.id !== id));
-    //     toast.success("Workout marked as done");
-    // }
+    const handleMarkAsDone = (id) => {
+        setTodaysWorkout((prev) => prev.filter((workout) => workout.id !== id));
+        toast.success("Workout marked as done");
+    }
 
-    // const handleRemoveWorkout = (activeTab, id) => {
-    //     if (activeTab === "today") {
-    //         setTodaysWorkout((prev) => prev.filter((workout) => workout.id !== id));
-    //         toast.error("Removed from today's plan");
-    //     } else if (activeTab === "saved") {
-    //         setSavedWorkout((prev) => prev.filter((workout) => workout.id !== id));
-    //         toast.error("Removed from saved");
-    //     }
-    // }
+    const handleRemoveWorkout = (activeTab, id) => {
+        if (activeTab === "today") {
+            setTodaysWorkout((prev) => prev.filter((workout) => workout.id !== id));
+            toast.error("Removed from today's plan");
+        } else if (activeTab === "saved") {
+            setSavedWorkout((prev) => prev.filter((workout) => workout.id !== id));
+            toast.error("Removed from saved");
+        }
+    }
 
     return (
         <div className="w-full bg-neutral border border-white/5 rounded-2xl p-4">
@@ -108,7 +108,7 @@ const ListedCard = ({ workout, activeTab }) => {
                     </button>
                 </Link>
 
-                {/* {activeTab === "today" && (
+                {activeTab === "today" && (
                     <button
                         onClick={() => handleMarkAsDone(id)}
                         className="btn btn-sm text-sm px-3 rounded-full bg-lime-400 hover:bg-lime-300 border-none text-neutral-900 text-[12px] font-bold"
@@ -123,7 +123,7 @@ const ListedCard = ({ workout, activeTab }) => {
                     className="btn btn-sm btn-circle btn-ghost text-neutral-content/40 hover:text-neutral-content"
                 >
                     <X className="w-4 h-4" />
-                </button> */}
+                </button>
 
             </div>
 
