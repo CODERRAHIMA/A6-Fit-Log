@@ -6,7 +6,7 @@ const page = () => {
     return (
         <>
             <Banner />
-            {/* <Library /> */}
+            <Library />
         </>
     );
 };
