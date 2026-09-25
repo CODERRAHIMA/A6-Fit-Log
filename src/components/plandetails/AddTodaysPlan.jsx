@@ -11,14 +11,18 @@ const AddTodaysPlan = ({ workout }) => {
     const isAdded = todaysWorkout.find((item) => item.id === workout.id);
 
     const handleAddToTodaysPlan = () => {
-        if (todaysWorkout.length < 5) {
-            setTodaysWorkout((prev) =>
-                prev.find((item) => item.id === workout.id) ? prev : [...prev, workout]
-            );
-            toast.success("Added to today's plan");
-        } else {
-            toast.error("You can only add 5 workouts per day.");
-        }
+        // if (todaysWorkout.length < 5) {
+        //     setTodaysWorkout((prev) =>
+        //         prev.find((item) => item.id === workout.id) ? prev : [...prev, workout]
+        //     );
+        //     toast.success("Added to today's plan");
+        // } else {
+        //     toast.error("You can only add 5 workouts per day.");
+        // }
+        setTodaysWorkout((prev) =>
+            prev.find((item) => item.id === workout.id) ? prev : [...prev, workout]
+        );
+        toast.success("Added to today's plan");
     }
 
     return (

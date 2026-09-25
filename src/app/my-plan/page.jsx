@@ -11,25 +11,25 @@ const MyPlanPage = () => {
     const { todaysWorkout, savedWorkout } = useContext(WorkOutContext);
 
     const [activeTab, setActiveTab] = useState("today");
-    // const [sortBy, setSortBy] = useState("duration");
+    const [sortBy, setSortBy] = useState("duration");
 
-    // const sortWorkOut = (workOuts) => {
+    const sortWorkOut = (workOuts) => {
 
-    //     const sortedWorkOut = [...workOuts];
-    //     if (sortBy === "duration") {
-    //         sortedWorkOut.sort((a, b) => b.duration - a.duration);
-    //     }
-    //     if (sortBy === "calories") {
-    //         sortedWorkOut.sort((a, b) => b.caloriesBurned - a.caloriesBurned);
-    //     }
-    //     if (sortBy === "rating") {
-    //         sortedWorkOut.sort((a, b) => b.rating - a.rating);
-    //     }
-    //     return sortedWorkOut;
-    // }
+        const sortedWorkOut = [...workOuts];
+        if (sortBy === "duration") {
+            sortedWorkOut.sort((a, b) => b.duration - a.duration);
+        }
+        if (sortBy === "calories") {
+            sortedWorkOut.sort((a, b) => b.caloriesBurned - a.caloriesBurned);
+        }
+        if (sortBy === "rating") {
+            sortedWorkOut.sort((a, b) => b.rating - a.rating);
+        }
+        return sortedWorkOut;
+    }
 
-    // const sortedTodaysPlan = sortWorkOut(todaysWorkout);
-    // const sortedSavedPlan = sortWorkOut(savedWorkout);
+    const sortedTodaysPlan = sortWorkOut(todaysWorkout);
+    const sortedSavedPlan = sortWorkOut(savedWorkout);
 
     return (
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 md:py-10 my-12 lg:my-0 space-y-2'>
@@ -63,7 +63,7 @@ const MyPlanPage = () => {
                 </div>
 
                 {/* sorting */}
-                {/* <div className="flex gap-3 items-center">
+                <div className="flex gap-3 items-center">
                     <label
                         htmlFor="sort"
                         className="text-sm font-semibold tracking-wider text-gray-400"
@@ -80,7 +80,7 @@ const MyPlanPage = () => {
                         <option value="calories">Calories</option>
                         <option value="rating">Rating</option>
                     </select>
-                </div> */}
+                </div>
 
             </div>
 
@@ -89,8 +89,8 @@ const MyPlanPage = () => {
                 {activeTab === "today" ? (
                     <div className='grid grid-cols-1 gap-4'>
                         {
-                            todaysWorkout.length > 0 ? (
-                                todaysWorkout.map((workout, index) => (
+                            sortedTodaysPlan.length > 0 ? (
+                                sortedTodaysPlan.map((workout, index) => (
                                     <ListedCard key={index} workout={workout} activeTab={activeTab} />
                                 ))
                             ) : (
@@ -107,8 +107,8 @@ const MyPlanPage = () => {
                 ) : (
                     <div className='grid grid-cols-1 gap-4'>
                         {
-                            savedWorkout.length > 0 ? (
-                                savedWorkout.map((workout, index) => (
+                            sortedSavedPlan.length > 0 ? (
+                                sortedSavedPlan.map((workout, index) => (
                                     <ListedCard key={index} workout={workout} activeTab={activeTab} />
                                 ))
                             ) : (
