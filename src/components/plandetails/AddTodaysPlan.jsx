@@ -15,9 +15,9 @@ const AddTodaysPlan = ({ workout }) => {
             setTodaysWorkout((prev) =>
                 prev.find((item) => item.id === workout.id) ? prev : [...prev, workout]
             );
-            // toast.success("Added to today's plan");
+            toast.success("Added to today's plan");
         } else {
-            // toast.error("You can only add 5 workouts per day.");
+            toast.error("You can only add 5 workouts per day.");
         }
     }
 

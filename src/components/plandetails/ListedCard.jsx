@@ -13,16 +13,16 @@ const ListedCard = ({ workout, activeTab }) => {
 
     const handleMarkAsDone = (id) => {
         setTodaysWorkout((prev) => prev.filter((workout) => workout.id !== id));
-        // toast.success("Workout marked as done");
+        toast.success("Workout marked as done");
     }
 
     const handleRemoveWorkout = (activeTab, id) => {
         if (activeTab === "today") {
             setTodaysWorkout((prev) => prev.filter((workout) => workout.id !== id));
-            // toast.error("Removed from today's plan");
+            toast.error("Removed from today's plan");
         } else if (activeTab === "saved") {
             setSavedWorkout((prev) => prev.filter((workout) => workout.id !== id));
-            // toast.error("Removed from saved");
+            toast.error("Removed from saved");
         }
     }
 

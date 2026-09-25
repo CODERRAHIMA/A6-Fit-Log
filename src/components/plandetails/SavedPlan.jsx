@@ -14,7 +14,7 @@ const SavedPlan = ({workout}) => {
         setSavedWorkout((prev) =>
             prev.find((item) => item.id === workout.id) ? prev : [...prev, workout]
         );
-        // toast.success("Saved for later");
+        toast.success("Saved for later");
     }
 
     return (
