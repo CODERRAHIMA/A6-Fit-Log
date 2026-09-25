@@ -93,8 +93,8 @@ const WorkOutDetailsPage = async ({ params }) => {
 
                     {/* Actions */}
                     <div className="flex flex-wrap gap-3 mt-6">
-                        <AddTodaysPlan workout={workout} />
-                        <SavedPlan workout={workout} />
+                        {/* <AddTodaysPlan workout={workout} /> */}
+                        {/* <SavedPlan workout={workout} /> */}
                     </div>
                 </div>
             </div>
