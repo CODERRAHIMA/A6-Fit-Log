@@ -4,7 +4,7 @@ import { ArrowLeft } from "lucide-react";
 export default function NotFound() {
     return (
         <div className="flex min-h-[70vh] items-center justify-center bg-black px-6 text-center">
-            {/* <div className="max-w-md">
+            <div className="max-w-md">
                 <p className="font-oswald text-7xl font-bold tracking-tight text-[#C2F800] sm:text-8xl">
                     404
                 </p>
@@ -24,7 +24,7 @@ export default function NotFound() {
                     <ArrowLeft className="h-4 w-4" />
                     Back to Workouts
                 </Link>
-            </div> */}
+            </div>
         </div>
     );
 }
