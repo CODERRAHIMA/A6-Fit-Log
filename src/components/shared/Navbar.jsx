@@ -57,7 +57,7 @@ const Navbar = () => {
                     </ul>
                 </div>
 
-                <div className="navbar-end gap-6">
+                <div className="navbar-end gap-3 lg:gap-6">
                     <Link href="/my-plan"
                         className="flex items-center gap-2 text-sm font-medium text-gray-200 transition-colors hover:text-white">
                         Plan <span className="flex h-6 min-w-6 items-center justify-center rounded-full bg-[#C2F800] px-2 text-xs font-bold text-black shadow-[0_0_10px_rgba(194,248,0,0.2)]">
