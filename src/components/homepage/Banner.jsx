@@ -34,7 +34,7 @@ const Banner = () => {
                             into today's plan, and watch the week's work add up.
                         </p>
 
-                        <a href="#library" className="mt-6 sm:mt-7 md:mt-8 w-fit mx-auto lg:mx-0 bg-[#B6FF00] hover:bg-[#c5ff33] cursor-pointer text-black font-bold text-sm px-5 sm:px-6 py-3 rounded-md transition duration-300">
+                        <a href="#library" className="mt-6 sm:mt-7 md:mt-8 w-fit mx-auto lg:mx-0 bg-[#B6FF00] hover:bg-[#b7e015] cursor-pointer text-black font-bold text-sm px-5 sm:px-6 py-3 rounded-md transition duration-300">
                             BROWSE WORKOUTS
                         </a>
                     </div>

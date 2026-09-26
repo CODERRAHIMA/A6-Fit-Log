@@ -20,7 +20,7 @@ const SavedPlan = ({workout}) => {
     return (
         <button
             onClick={() => handleSavedPlan()}
-            className={`btn btn-outline rounded-xl hover:bg-white/5 hover:border-white/15 font-semibold ${isSaved ? "bg-white/5 text-gray-300" : "border-white/15 text-neutral-content"}`}
+            className={`btn btn-outline rounded-xl hover:bg-white/5 hover:border-white/15 font-semibold ${isSaved ? "bg-white/5 text-gray-300" : "border-white/50 text-neutral-content"}`}
             disabled={isSaved}
         >
             <Bookmark className="w-4 h-4" />

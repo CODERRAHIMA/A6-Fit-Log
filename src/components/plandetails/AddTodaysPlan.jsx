@@ -24,7 +24,7 @@ const AddTodaysPlan = ({ workout }) => {
     return (
         <button
             onClick={() => handleAddToTodaysPlan()}
-            className={`btn border-none rounded-xl font-semibold ${isAdded ? "bg-white/5 text-gray-300" : "bg-[#CCFF00] text-neutral-900"}`}
+            className={`btn border-none hover:bg-[#b7e015] rounded-xl font-semibold ${isAdded ? "bg-white/5 text-gray-300" : "bg-[#CCFF00] text-neutral-900"}`}
             disabled={isAdded}
         >
             <Calendar className="w-4 h-4" />
