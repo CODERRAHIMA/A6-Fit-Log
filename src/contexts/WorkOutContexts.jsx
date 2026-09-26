@@ -48,7 +48,8 @@ const WorkOutProvider = ({ children }) => {
         todaysWorkout,
         setTodaysWorkout,
         savedWorkout,
-        setSavedWorkout
+        setSavedWorkout,
+        isLoaded
     }
 
     return (

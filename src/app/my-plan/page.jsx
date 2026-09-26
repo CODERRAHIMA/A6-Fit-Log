@@ -8,7 +8,7 @@ import React, { useContext, useState } from 'react';
 
 const MyPlanPage = () => {
 
-    const { todaysWorkout, savedWorkout } = useContext(WorkOutContext);
+    const { todaysWorkout, savedWorkout, isLoaded } = useContext(WorkOutContext);
 
     const [activeTab, setActiveTab] = useState("today");
     const [sortBy, setSortBy] = useState("duration");
@@ -103,7 +103,11 @@ const MyPlanPage = () => {
 
             {/* content */}
             <div className="mt-6">
-                {activeTab === "today" ? (
+                {!isLoaded ? (
+                    <p role="status" className="py-8 text-center text-gray-400">
+                        Loading workouts…
+                    </p>
+                ) : activeTab === "today" ? (
                     <div className='grid grid-cols-1 gap-4'>
                         {
                             sortedTodaysPlan.length > 0 ? (
