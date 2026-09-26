@@ -6,7 +6,7 @@ import React from 'react';
 
 // if here
 const getWorkOuts = async ({ workoutId }) => {
-    const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${workoutId}`);
+    const res = await fetch(`https://api.api-store.workers.dev/api/fitlog/${workoutId}`);
     return await res.json();
 }
 
