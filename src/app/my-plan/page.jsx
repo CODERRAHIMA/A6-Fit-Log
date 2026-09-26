@@ -55,7 +55,7 @@ const MyPlanPage = () => {
                         onClick={() => setActiveTab("today")}
                         className={`tab rounded-xl px-4 text-sm font-semibold transition-all duration-200 sm:px-5
                             ${activeTab === "today"
-                                ? "bg-[#1F242D] text-[#C2F800] shadow-sm"
+                                ? "bg-[#1F242D] text-[#bde12f] shadow-sm"
                                 : "text-gray-400 hover:text-white"
                             }`}
                     >
@@ -68,7 +68,7 @@ const MyPlanPage = () => {
                         onClick={() => setActiveTab("saved")}
                         className={`tab rounded-xl px-4 text-sm font-semibold transition-all duration-200 sm:px-5
                             ${activeTab === "saved"
-                                ? "bg-[#1F242D] text-[#C2F800] shadow-sm"
+                                ? "bg-[#1F242D] text-[#bde12f] shadow-sm"
                                 : "text-gray-400 hover:text-white"
                             }`}
                     >

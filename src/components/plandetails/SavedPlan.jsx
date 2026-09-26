@@ -11,17 +11,19 @@ const SavedPlan = ({workout}) => {
     const isSaved = savedWorkout.find((item) => item.id === workout.id);
 
     const handleSavedPlan = () => {
-        setSavedWorkout((prev) =>
-            prev.find((item) => item.id === workout.id) ? prev : [...prev, workout]
-        );
+        if(isSaved) {
+            toast.error("Already saved for later.");
+            return;
+        }
+
+        setSavedWorkout((prev) => [...prev, workout]);
         toast.success("Saved for later");
     }
 
     return (
         <button
             onClick={() => handleSavedPlan()}
-            className={`btn btn-outline rounded-xl hover:bg-white/5 hover:border-white/15 font-semibold ${isSaved ? "bg-white/5 text-gray-300" : "border-white/50 text-neutral-content"}`}
-            disabled={isSaved}
+            className={`btn btn-outline rounded-xl hover:bg-white/5 hover:border-white/15 font-semibold ${isSaved ? "bg-white/5 border-white/5 text-gray-300" : "border-white/50 text-neutral-content"}`}
         >
             <Bookmark className="w-4 h-4" />
             {isSaved ? "Saved for later" : "Save for later"}
